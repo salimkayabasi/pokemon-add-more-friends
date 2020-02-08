@@ -1,9 +1,9 @@
 const puppeteer = require('puppeteer');
 
 const POKEMON_GO_URL = 'https://www.fcswap.com/game/pokemon-go/';
-const {POKEMON_CODE} = process.env;
+const {POKEMON_CODE, CI = false} = process.env;
 
-const IS_CI = !!(process.env.CI);
+const IS_CI = !!CI;
 
 process.on('unhandledRejection', error => {
     console.error(error);
