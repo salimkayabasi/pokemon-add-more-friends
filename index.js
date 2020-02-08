@@ -25,12 +25,14 @@ const addToFCSWAP = async () => {
     const {browser, page} = await getPage(FCSWAP_URL);
     await page.type('#codetext', POKEMON_CODE, {delay: 100});
     await page.$eval('input[name="submit"]', button => button.click());
+    console.info(`${POKEMON_CODE} has been added to FCSWAP`);
     await browser.close();
 };
 const addToPGFC = async () => {
     const {browser, page} = await getPage(PGFC_URL);
     await page.type('#inputFriendCode', POKEMON_CODE, {delay: 100});
     await page.$eval('#inputFcForm button', button => button.click());
+    console.info(`${POKEMON_CODE} has been added to PGFC`);
     await browser.close();
 };
 (async () => {
