@@ -6,6 +6,10 @@ workflows:
     triggers:
       - schedule:
           cron: "*/10 * * * *"
+          filters:
+            branches:
+              only:
+                - master
     jobs:
       - pokemon
 jobs:
