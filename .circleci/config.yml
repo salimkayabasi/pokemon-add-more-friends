@@ -1,6 +1,9 @@
 version: 2.1
 workflows:
   version: 2
+  commit:
+    jobs:
+      - pokemon
   scheduled:
     triggers:
       - schedule:
