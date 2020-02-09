@@ -1,12 +1,19 @@
 version: 2.1
+
+workflows:
+  version: 2
+  scheduled:
+    triggers:
+      - schedule:
+          cron: "*/10 * * * *"
+    jobs:
+      - build
 jobs:
-  build:
+  pokemon:
     docker:
       - image: node:alpine
     steps:
-      - run:
-          name: install deps
-          command: npm install
-      - run:
-          name: execture
-          command: npm run start
+      - checkout
+      - run: npm install
+      - run: POKEMON_CODE=571267206266 npm run start
+      - run: POKEMON_CODE=392549737526 npm run start

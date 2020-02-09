@@ -3,7 +3,6 @@ node_js:
   - node
 script:
   - npm start
-
 env:
   - POKEMON_CODE=571267206266
   - POKEMON_CODE=392549737526
