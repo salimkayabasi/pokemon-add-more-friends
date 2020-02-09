@@ -7,7 +7,7 @@ workflows:
       - schedule:
           cron: "*/10 * * * *"
     jobs:
-      - build
+      - pokemon
 jobs:
   pokemon:
     docker:
