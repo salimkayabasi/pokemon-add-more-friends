@@ -1,0 +1,12 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: node:alpine
+    steps:
+      - run:
+          name: install deps
+          command: npm install
+      - run:
+          name: execture
+          command: npm run start
