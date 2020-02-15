@@ -35,3 +35,4 @@ jobs:
       - run: POKEMON_CODE=571267206266 npm run start
       - run: POKEMON_CODE=392549737526 npm run start
       - run: POKEMON_CODE=296865690446 npm run start
+      - run: POKEMON_CODE=858952315477 npm run start
